@@ -1,0 +1,124 @@
+/* 기본 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8; /* 아주 밝은 회색 배경 */
+}
+
+/* 헤더 스타일 */
+header {
+    width: 80%;
+    max-width: 1000px; /* 최대 너비 설정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    font-size: 2.2em;
+    font-weight: 800; /* 굵게 */
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.home-link:hover {
+    color: #00bcd4; /* 청록색으로 호버 효과 */
+}
+
+.home-link .fas {
+    margin-right: 5px;
+}
+
+/* 메인 기능 박스 컨테이너 */
+.main-features {
+    display: flex;
+    gap: 40px; /* 두 박스 사이 간격 */
+    margin-top: 50px; /* 헤더와의 간격 조정 */
+}
+
+/* 개별 기능 박스 */
+.feature-box {
+    width: 280px;
+    height: 250px;
+    background-color: #fff;
+    /* 사용자 이미지에서 보이는 옅은 청록색 테두리 */
+    border: 3px solid #AEEEEE; 
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* 은은한 그림자 */
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 호버 효과 */
+.feature-box:hover {
+    border-color: #00bcd4; /* 진한 청록색으로 변경 */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-5px); /* 살짝 위로 이동 */
+}
+
+/* 아이콘 스타일 */
+.feature-box .fas {
+    font-size: 5em; /* 아이콘 크기 */
+    color: #00bcd4; /* 아이콘 색상 (청록색) */
+    margin-bottom: 25px;
+    transition: color 0.3s;
+}
+
+/* 텍스트 스타일 */
+.feature-box span {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 푸터 (선택 사항) */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* 반응형 디자인 (선택 사항 - 모바일 환경 대비) */
+@media (max-width: 768px) {
+    .main-features {
+        flex-direction: column; /* 모바일에서는 세로로 나열 */
+        gap: 30px;
+    }
+
+    .feature-box {
+        width: 80vw; /* 화면 너비의 80% 사용 */
+        height: 200px;
+    }
+}
